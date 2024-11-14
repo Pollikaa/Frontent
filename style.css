@@ -17,7 +17,7 @@ body {
 
 .game-container {
     text-align: center;
-    background: rgba(239, 100, 76, 0.696);
+    background: rgbargba(239, 149, 76, 0.696);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
