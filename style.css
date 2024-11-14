@@ -1,0 +1,150 @@
+body {
+    text-align: center;
+    background-image: url('phone.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #f4ecec;
+    font-size: 18px;
+    flex-direction: column;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(239, 149, 76, 0.696);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 420px;
+    max-width: 100%;
+    margin: 10px;
+}
+
+.slot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 15px 0;
+    justify-items: center;
+}
+
+.slot-cell {
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    border: 2px solid #888;
+    border-radius: 8px;
+    background-size: cover;
+}
+
+.slot-cell.win-effect {
+    animation: flash 0.5s ease-in-out;
+}
+
+@keyframes flash {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.spin-btn {
+    background-color: #00e1ffd4;
+    color: #f4ecec;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.spin-btn:hover {
+    background-color: #00a6bcd4;
+}
+
+.jackpot {
+    font-size: 24px;
+    color: gold;
+    display: none;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .slot-cell {
+        width: 80px;
+        height: 80px;
+    }
+
+    .spin-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .game-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .slot-cell {
+        width: 60px;
+        height: 60px;
+    }
+
+    .spin-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .game-container {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .slot-cell {
+        width: 50px;
+        height: 50px;
+    }
+
+    .spin-btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .game-container {
+        width: 100%;
+        padding: 8px;
+    }
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(500px);
+    }
+}
