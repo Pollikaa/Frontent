@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" defer></script>
+  <title>Лабораторна робота №10</title>
+</head>
+<body>
+<div class="game-container">
+  <h1>Гра «Однорукий бандит»</h1>
+  <p id="username"></p>
+  <div id="attempt">Раунд: 1 з 3</div>
+  <div class="slot-grid">
+    <div class="slot-cell" id="cell1"></div>
+    <div class="slot-cell" id="cell2"></div>
+    <div class="slot-cell" id="cell3"></div>
+    <div class="slot-cell" id="cell4"></div>
+    <div class="slot-cell" id="cell5"></div>
+    <div class="slot-cell" id="cell6"></div>
+    <div class="slot-cell" id="cell7"></div>
+    <div class="slot-cell" id="cell8"></div>
+    <div class="slot-cell" id="cell9"></div>
+  </div>
+  <button class="spin-btn" onclick="spin()">Spin</button>
+  <div class="jackpot" id="jackpotMessage">🎉 Ви виграли! 🎉</div>
+</div>
+</body>
+</html>
